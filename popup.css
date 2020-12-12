@@ -1,101 +1,152 @@
-body{
-   width: 350px;
-   height: 462px;
+body {
+  width: 350px;
+  height: 562px;
+  background-color: #1c2e38;
+  color: white;
 }
-.header{
-   display: flex;
-   justify-content: center;
+input {
+  outline: none;
 }
-.header__img{
-   width: 120px;
-   height: 120px;
+.header {
+  display: flex;
+  justify-content: center;
+}
+.header__img {
+  width: 120px;
+  height: 120px;
 }
 
-.options{
-   
+.container {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
 }
 
-.result{
-  
+.option__label {
+  font-family: "arial";
+  font-weight: 600;
+  padding: 5px;
 }
 
 /* toogle switcher */
-.switch{
-   position: relative;
-   display: inline-block;
-   width: 65px;
-   height:28px;
-   margin:0 10px
- }
- 
- .slider{
-   position: absolute;
-   cursor: pointer;
-   top:0;
-   right:0;
-   bottom:0;
-   left:0;
-   background-color:#ccc;
-   transition: .4s;
-   border-radius: 34px;
- }
- 
- .switch input{
-   display: none;
- }
- 
- .slider:before{
-   position: absolute;
-   content:"";
-   height:20px;
-   width:20px;
-   left:5px;
-   bottom: 5px;
-   background-color:white;
-   transition:0.4s;
-   border-radius: 34px;
- }
- 
- input:checked + .slider{
-   background-color: green;
- }
- 
- input:checked + .slider:before{
-   transform: translateX(35px);
- }
- 
- 
- 
- .on{
-   color: white;
-   position: absolute;
-   transform: translate(-50%,-50%);
-   top: 50%;
-   right: 50%;
-   font-size:10px;
-   font-family: Verdana, sans-serif;
- }
- 
-  .off
- {
-   color: white;
-   position: absolute;
-   transform: translate(-50%,-50%);
-   top: 50%;
-   left: 68%;
-   font-size: 10px;
-   font-family: Verdana, sans-serif;
- }
- 
- input:checked+ .slider .on
- {display: block;}
- 
- input:not(:checked)+.slider .on{
-   display: none;
- }
- 
- input:checked + .slider .off
- {display: none;}
- 
- /*--------- END --------*/
- 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 65px;
+  height: 28px;
+  margin: 0 10px;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 5px;
+  bottom: 5px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+input:checked + .slider {
+  background-color: #28a745;
+}
+
+input:checked + .slider:before {
+  transform: translateX(35px);
+}
+
+.on {
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  right: 50%;
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+}
+
+.off {
+  color: white;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 68%;
+  font-size: 10px;
+  font-family: Verdana, sans-serif;
+}
+
+input:checked + .slider .on {
+  display: block;
+}
+
+input:not(:checked) + .slider .on {
+  display: none;
+}
+
+input:checked + .slider .off {
+  display: none;
+}
+
+/*--------- END --------*/
+
+/* Remove arrows from input number */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#range__label {
+  margin: auto;
+}
+
+.btn__submit {
+  display: flex;
+  justify-content: center;
+}
+
+.result_div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#message {
+  padding: 8px;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+}
+#result {
+  margin-top: 20px;
+  border-radius: 15px;
+  cursor: pointer;
+  box-shadow: none;
+  border: none;
+  height: 30px;
+}

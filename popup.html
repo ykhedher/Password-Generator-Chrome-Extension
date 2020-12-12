@@ -3,6 +3,7 @@
 
 <head>
    <title>Document</title>
+   <meta charset="UTF-8">
    <link rel="stylesheet" href="./packages/bootstrap.min.css">
    <link rel="stylesheet" href="popup.css">
 </head>
@@ -11,33 +12,76 @@
    <div class="container-fluid main">
       <div class="row">
          <div class="col header">
-            
-             <img class="header__img" src="./KeyLow Safety.png"/>
+
+            <img class="header__img" src="./KeyLow Safety.png" />
          </div>
       </div>
       <div class="row">
          <div class="col options">
             <div class="container">
-               <label>Uppercase:</label>
+               <label class="option__label">Uppercase</label>
                <label class="switch">
-               <input type="checkbox" checked>
-               <span class="slider">
-                 <span class="on">ON</span><span class="off">OFF</span>
-               </span>
+                  <input type="checkbox" id="uppercase" value="on1" />
+                  <span class="slider">
+                     <span class="on">ON</span><span class="off">OFF</span>
+                  </span>
                </label>
-             </div>
+            </div>
+
+            <div class="container">
+               <label class="option__label">Lowercase</label>
+               <label class="switch">
+                  <input type="checkbox" id="lowercase" />
+                  <span class="slider">
+                     <span class="on">ON</span><span class="off">OFF</span>
+                  </span>
+               </label>
+            </div>
+
+            <div class="container">
+               <label class="option__label">Numbers</label>
+               <label class="switch">
+                  <input type="checkbox" id="numbers" />
+                  <span class="slider">
+                     <span class="on">ON</span><span class="off">OFF</span>
+                  </span>
+               </label>
+            </div>
+
+            <div class="container">
+               <label class="option__label">Special Characters</label>
+               <label class="switch">
+                  <input type="checkbox" id="specials" />
+                  <span class="slider">
+                     <span class="on">ON</span><span class="off">OFF</span>
+                  </span>
+               </label>
+            </div>
+            <div class="container">
+               <label class="option__label">Password Length</label>
+               <input type="range" id="range" class="form-range" name="range" min="8" max="128" step='1' value="15" />
+               <label for="range" id="range__label"></label>
+
+            </div>
+            <div class="btn__submit">
+               <button type="submit" class="btn btn-primary" id="btn__click" disabled>Generate Password</button>
+            </div>
+
          </div>
       </div>
       <div class="row">
-         <div class="col result">
-            Result
+         <div class="col result_div">
+            <input type="text" id="result" name="country" value="" size="30" readonly>
+            <p id="message"></p>
          </div>
       </div>
+
    </div>
 
 
    <script src="./packages/jquery-3.5.1.min.js"></script>
    <script src="./packages/bootstrap.min.js"></script>
+   <script src="./script.js"></script>
 </body>
 
 </html>
